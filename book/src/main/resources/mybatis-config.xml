@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+
+	<!-- 配置日志实现为Log4j(需要提供对应的依赖) -->
+	<settings>
+		<setting name="logImpl" value="LOG4J" />
+	</settings>
+
+	<!-- 配置别名 -->
+	<typeAliases>
+		<package name="org.xie.book.domain" />
+	</typeAliases>
+
+	<!-- 物理分页拦截器 -->
+	<!-- 支持的数据库 oracle,mysql,sqlserver2005+, mariadb,sqlite,hsqldb,postgresql,db2,informix -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+		</plugin>
+	</plugins>
+
+
+
+</configuration>
